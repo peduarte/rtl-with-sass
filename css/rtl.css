@@ -20,7 +20,7 @@ header {
   color: #737E8C;
   background: #ffffff;
   display: block;
-  padding: 40px 200px 40px 40px;
+  padding: 40px 40px 40px 200px;
   position: relative; }
   /* line 22, _global.scss */
   header p {

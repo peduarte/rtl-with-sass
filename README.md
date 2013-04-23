@@ -27,12 +27,14 @@ Recently I worked on a different website, but I got to do it from scratch, so I 
 	
 	// This sets our opposite default direction
 	$opDir: right !default;
-	
-	
+		
 	@function invertValues($top, $right, $bottom, $left: $right) {
-	    @if $left == true {
+	    @if $left != null {
 	        @if $dir == right {
 	            @return $top $left $bottom $right;
+	        }
+	        @else {
+	            @return $top $right $bottom $left;
 	        }
 	    }
 	    @else {

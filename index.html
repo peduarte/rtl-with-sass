@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <title>RTL Stylesheet with SASS</title>
     <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/rtl.css" disabled>
 </head>
 <body>
 
 	<header>
 		<h1>RTL with SASS</h1>
-		<h2>A simple and powerful way to generate RTL Stysheet with SASS.</h2>
+		<h2>A simple and powerful way to generate RTL Stylesheet with SASS.</h2>
 
 		<p>View it on <a href="https://github.com/peduarte/rtl-with-sass">GitHub</a></p>
 	</header>
 
 	<div class="content">
-		<span><a href="#" onclick="switchCSS()">Toggle CSS!</a></span>
+		<span><a href="#" onclick="switchCSS('css/rtl.css')">Toggle CSS!</a></span>
 
 		<ul>
 			<li><img src="img/1.jpg"> One</li>
@@ -31,16 +30,16 @@
 	</div>
 
 	<script type="text/javascript">
-		function switchCSS() {
-			var i, a, activeCSS, disabledCSS;
-			for (i = 0, a = document.getElementsByTagName('link'); i < a.length; i++) {
-				if (a[i].disabled) {
-					disabledCSS = a[i];
-					a[i].removeAttribute('disabled');
-				} else {
-					activeCSS = a[i]
-					a[i].setAttribute('disabled');
-				}
+		var link = document.getElementsByTagName('link')[0];
+		var defaultCSS = link.getAttribute('href');
+		var newCSS;
+
+		function switchCSS(asHref) {
+			if (newCSS === asHref) {
+				link.setAttribute('href', defaultCSS);
+			} else {
+				newCSS = asHref;
+				link.setAttribute('href', newCSS);
 			}
 		}
 	</script>

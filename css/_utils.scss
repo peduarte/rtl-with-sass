@@ -1,0 +1,17 @@
+// This sets our default direction
+$dir: left !default;
+
+// This sets our opposite default direction
+$opDir: right !default;
+
+
+@function invertValues($top, $right, $bottom, $left: $right) {
+    @if $left == true {
+        @if $dir == right {
+            @return $top $left $bottom $right;
+        }
+    }
+    @else {
+        @return $top $right $bottom $left;
+    }
+}

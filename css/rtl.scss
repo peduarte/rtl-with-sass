@@ -1,0 +1,11 @@
+// This overrides our default value of $dir
+$dir: right;
+
+// This overrides our default value of $opDir
+$opDir: left;
+
+@import 'all';
+
+body {
+	direction: rtl;
+}

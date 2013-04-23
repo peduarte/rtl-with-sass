@@ -1,0 +1,59 @@
+/* line 1, _global.scss */
+* {
+  margin: 0;
+  padding: 0; }
+
+/* line 3, _global.scss */
+body {
+  background: #737E8C;
+  color: #ffffff;
+  direction: ltr;
+  font-size: 16px;
+  text-align: left; }
+
+/* line 11, _global.scss */
+a {
+  color: #505862; }
+
+/* line 15, _global.scss */
+header {
+  color: #737E8C;
+  background: #ffffff;
+  display: block;
+  padding: 40px 200px 40px 40px;
+  position: relative; }
+  /* line 22, _global.scss */
+  header p {
+    background: #737E8C;
+    color: #ffffff;
+    padding: 10px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px; }
+
+/* line 32, _global.scss */
+.content {
+  width: 960px;
+  margin: 60px auto; }
+  /* line 36, _global.scss */
+  .content span {
+    display: block;
+    text-align: right;
+    padding: 5px 0; }
+
+/* line 43, _global.scss */
+ul {
+  list-style: none;
+  overflow: hidden;
+  margin: 0 0 30px 0; }
+
+/* line 49, _global.scss */
+li {
+  float: left;
+  width: 25%;
+  text-align: center; }
+  /* line 54, _global.scss */
+  li img {
+    display: block;
+    width: 100%;
+    margin: 0 0 15px; }

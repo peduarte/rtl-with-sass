@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RTL Stylesheet with SASS</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/rtl.css" disabled>
+</head>
+<body>
+
+	<header>
+		<h1>RTL with SASS</h1>
+		<h2>A simple and powerful way to generate RTL Stysheet with SASS.</h2>
+
+		<p>View it on <a href="https://github.com/peduarte/rtl-with-sass">GitHub</a></p>
+	</header>
+
+	<div class="content">
+		<span><a href="#" onclick="switchCSS()">Toggle CSS!</a></span>
+
+		<ul>
+			<li><img src="img/1.jpg"> One</li>
+			<li><img src="img/2.jpg"> Two</li>
+			<li><img src="img/3.jpg"> Three</li>
+			<li><img src="img/4.jpg"> Four</li>
+		</ul>
+
+		<section class="credits">
+			<p>All photos above are property of <a href="http://stuartruel.com">Stuart Ruel</a>.</p>
+		</section>
+	</div>
+
+	<script type="text/javascript">
+		function switchCSS() {
+			var i, a, activeCSS, disabledCSS;
+			for (i = 0, a = document.getElementsByTagName('link'); i < a.length; i++) {
+				if (a[i].disabled) {
+					disabledCSS = a[i];
+					a[i].removeAttribute('disabled');
+				} else {
+					activeCSS = a[i]
+					a[i].setAttribute('disabled');
+				}
+			}
+		}
+	</script>
+
+</body>
+</html>

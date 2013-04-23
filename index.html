@@ -36,6 +36,7 @@
 
 		function switchCSS(asHref) {
 			if (newCSS === asHref) {
+				newCSS = defaultCSS;
 				link.setAttribute('href', defaultCSS);
 			} else {
 				newCSS = asHref;
